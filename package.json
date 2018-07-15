@@ -1,0 +1,17 @@
+{
+  "name": "url-shortener",
+  "author": "saifsmailbox98",
+  "private": true,
+  "scripts": {
+    "start": "node server"
+  },
+"engines": {
+		"node": "6.11.1"
+},
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30",
+    "shortid": "^2.2.8",
+    "base62": "^1.2.0"
+  }
+}

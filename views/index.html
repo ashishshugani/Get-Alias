@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>API:URL Shortener Microservice</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="shortcut icon" href="https://cdn.glitch.com/f4a2a7dc-6a77-449d-b876-d26567b29932%2Ffavicon.ico?1500134836921" type="image/x-icon"/>
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <br>
+      <div class="container">
+         <h2 class="head-color">
+            API:URL Shortener Microservice
+         </h2>
+         
+         <blockquote class="blockquote" style="margin:auto;max-width:1200px">
+            <div class="text">
+               <h3 class="subhead-color">
+                  How it works:
+               </h3>
+               1) If passed a URL as a parameter, it will return a shortened URL in the JSON response.
+               <br>
+               2) When the shorten url is visited, it will redirect to the original link.
+            </div>
+         </blockquote>
+         <br>
+         <div style="margin:auto;max-width:1200px">
+            <h2 class="subhead-color">
+               Example creation usage:
+            </h2>
+            <code>https://sho.herokuapp.com/https://www.google.com</code> <a class="btn btn-warning btn-sm" href="/https://www.google.com" role="button" target="_blank"><i class="fa fa-link"></i></a><br>
+            <code>https://sho.herokuapp.com/http://foo.com:80</code> <a class="btn btn-warning btn-sm" href="/http://foo.com:80" role="button" target="_blank"><i class="fa fa-link"></i></a>
+            <h2 class="subhead-color">
+               Example creation output:
+            </h2>
+            <code>{"original_url":"http://foo.com:80","short_url":"https://sho.herokuapp.com/g71ac5"}</code>
+            <h2 class="subhead-color">
+               Usage:
+            </h2>
+            <code>https://sho.herokuapp.com/g71ac5</code> <a class="btn btn-warning btn-sm" href="/g71ac5" role="button" target="_blank"><i class="fa fa-link"></i></a>
+            <h2 class="subhead-color">
+               Will redirect to:
+            </h2>
+            <code>http://foo.com:80</code>
+         </div>
+      </div>
+   </body>
+</html>
